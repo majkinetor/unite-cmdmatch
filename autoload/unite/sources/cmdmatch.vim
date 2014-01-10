@@ -42,9 +42,10 @@ fu! s:unite_source.gather_candidates(args, context)
     retu map(clist, '{ "word": v:val,  "kind": ["common", "command"], "action__command": v:val  }')
 endf
 
-"fu! unite#sources#complete#define()
-  "retu s:unite_source
-"endf
+fu! unite#sources#cmdmatch#define()
+  retu s:unite_source
+endf
+
 call unite#define_source(s:unite_source)
 call unite#custom#profile('source/common', 'ignorecase', 1)
 "call unite#custom#source('cmdmatch', 'filters',['matcher_fuzzy'])
