@@ -1,7 +1,7 @@
 unite-cmdmatch
 ==============
 
-This is [unite](https://github.com/Shougo/unite.vim) source that simulates command line completition. It cmaps one key, `<c-o>`, which can be used wile entering command to show completition list for the last word typed.
+This is [unite](https://github.com/Shougo/unite.vim) source that simulates command line completion. It cmaps one key, `<c-o>`, which can be used while entering command to show completion list for the last word typed.
 
 
 ## Install
@@ -17,6 +17,6 @@ This is [unite](https://github.com/Shougo/unite.vim) source that simulates comma
 
 ## To do
 
-- Find better way to create mapping. Currently `"` and `v` registers are overwriten by the plugin
-- Find a way to hide vim's command line glitch. See [this](http://vim.wikia.com/wiki/Get_ex_command_line_completition_as_a_list) page for more info.
-- Allow for completition of more then last token (i.e. `help f<c-o>` should give list of help options). That would be made easy if previous problem is solved. 
+- Find a better way to create mapping. Currently `"` and `v` registers are overwritten by the plugin.
+- Find a way to hide Vim's command line glitch. See [this](http://vim.wikia.com/wiki/Get_ex_command_line_completion_as_a_list) page for more info.
+- Allow for completion of more then last token (i.e. `help f<c-o>` should give list of help options). That would be made easy if previous problem is solved.
