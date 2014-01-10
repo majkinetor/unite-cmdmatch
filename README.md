@@ -17,6 +17,6 @@ This is [unite](https://github.com/Shougo/unite.vim) source that simulates comma
 
 ## To do
 
-- Find better way to create mapping. Currently @" and @v registers are overwriten by the plugin
-- Find a way to hide command line history glitch.
+- Find better way to create mapping. Currently `"` and `v` registers are overwriten by the plugin
+- Find a way to hide vim's command line glitch. See [this](http://vim.wikia.com/wiki/Get_ex_command_line_completition_as_a_list) page for more info.
 - Allow for completition of more then last token (i.e. `help f<c-o>` should give list of help options). That would be made easy if previous problem is solved. 
