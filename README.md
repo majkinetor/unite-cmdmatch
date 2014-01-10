@@ -8,10 +8,11 @@ This is [unite](https://github.com/Shougo/unite.vim) source that simulates comma
 
 ```vim
     NeoBundle 'majkinetor/unite-cmdmatch' , { 'depends':  'Shougo/unite.vim' }
-    sil! call unite#sources#cmdmatch#define()
 ```
 
+or using any plugin manager...
 ---
+
 
 ![screenshot](http://s30.postimg.org/tbh1oqmlt/cmd_match.gif)
 
