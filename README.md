@@ -9,5 +9,5 @@ See the [screenshot](http://imagebin.org/index.php?mode=image&id=285956).
 
 ```vim
     NeoBundle 'majkinetor/unite-cmdmatch' , { 'depends':  'Shougo/unite.vim' }
-    if exists("*unite#sources#cmdmatch#define") | call unite#sources#cmdmatch#define() | en
+    sil! call unite#sources#cmdmatch#define()
 ```
