@@ -16,18 +16,20 @@ let s:unite_source.action_table['*'].continue = {
       \ }
 
 fu! s:unite_source.action_table['*'].continue.func(candidate)
-    call feedkeys(':' . (s:prefix != '' ? ' ' : '') . a:candidate.action__command)
+    call feedkeys(':' . (s:prefix != '' ? s:prefix . ' ' : '') . a:candidate.action__command)
 endf
 
 fu! s:GetCmdCompletition(cmd)
 
-    let [cwh,ls] = [&cmdwinheight, &ls]
+    let [cwh,ls,v] = [&cwh, &ls, @v]
     set cwh=1 ls=0
 
-    exe "nn <buffer> z&u :" . a:cmd . "<c-a><c-f>yyo<cr>"
+    exe 'nn <buffer> z&u :' . a:cmd . '<c-a><c-f>"vyyo<cr>'
     norm z&u
-    let [&cwh,&ls] = [cwh,ls]
-    return split(@0)
+    let res = split(@v)
+
+    let [&cwh,&ls,@v] = [cwh,ls,v]
+    return res
 endf
 
 fu! s:unite_source.gather_candidates(args, context)
@@ -50,5 +52,4 @@ call unite#define_source(s:unite_source)
 call unite#custom#profile('source/common', 'ignorecase', 1)
 "call unite#custom#source('cmdmatch', 'filters',['matcher_fuzzy'])
 
-
-cmap <c-o> <c-f>^yg_ddo<cr>:Unite -direction=botr -start-insert -input=<c-r>=strpart(@0, strridx(@0, ' ')+1)<cr> cmdmatch:<c-r>=escape(@0,' ')<cr><cr>
+cno <c-o> <c-f>^"vyg_ddo<cr>:Unite -buffer-name=cmdmatch -direction=botr -start-insert -input=<c-r>=strpart(@v, strridx(@v, ' ')+1)<cr> cmdmatch:<c-r>=escape(@v,' ')<cr><cr>

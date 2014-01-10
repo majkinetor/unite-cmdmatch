@@ -14,3 +14,9 @@ This is [unite](https://github.com/Shougo/unite.vim) source that simulates comma
 ---
 
 ![screenshot](http://s30.postimg.org/tbh1oqmlt/cmd_match.gif)
+
+## To do
+
+- Find better way to create mapping. Currently @" and @v registers are overwriten by the plugin
+- Find a way to hide command line history glitch.
+- Allow for completition of more then last token (i.e. `help f<c-o>` should give list of help options). That would be made easy if previous problem is solved. 
