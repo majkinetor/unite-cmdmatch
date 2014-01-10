@@ -3,7 +3,6 @@ unite-cmdmatch
 
 This is [unite](https://github.com/Shougo/unite.vim) source that simulates command line completition. It cmaps one key, `<c-o>`, which can be used wile entering command to show completition list for the last word typed.
 
-See the [screenshot](http://imagebin.org/index.php?mode=image&id=285956).
 
 ## Install
 
@@ -11,3 +10,7 @@ See the [screenshot](http://imagebin.org/index.php?mode=image&id=285956).
     NeoBundle 'majkinetor/unite-cmdmatch' , { 'depends':  'Shougo/unite.vim' }
     sil! call unite#sources#cmdmatch#define()
 ```
+
+---
+
+![screenshot](http://s30.postimg.org/tbh1oqmlt/cmd_match.gif)
