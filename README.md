@@ -9,10 +9,10 @@ NOTE: This is a work in progress.
 
 ```vim
     "Easiest way
-    NeoBundle,  'majkinetor/unite-cmdmatch'
+    NeoBundle 'majkinetor/unite-cmdmatch'
 
     " With dependency
-    NeoBundle,  'majkinetor/unite-cmdmatch', { 'depends': 'Shougo/unite.vim' }
+    NeoBundle 'majkinetor/unite-cmdmatch', { 'depends': 'Shougo/unite.vim' }
 
     " With lazy loading and custom map
     NeoBundleLazy 'majkinetor/unite-cmdmatch', { 'depends': 'Shougo/unite.vim', 'mappings' : [['c', '<Plug>(unite_cmdmatch_complete)']] }
