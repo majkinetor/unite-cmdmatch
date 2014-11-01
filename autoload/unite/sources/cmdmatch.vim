@@ -56,6 +56,6 @@ fu! unite#sources#cmdmatch#define()
   retu s:unite_source
 endf
 
-call unite#custom#profile('source/common', 'ignorecase', 1)
+call unite#custom#profile('source/common', 'context.ignorecase', 1)
 "call unite#custom#source('cmdmatch', 'filters',['matcher_fuzzy'])
 
